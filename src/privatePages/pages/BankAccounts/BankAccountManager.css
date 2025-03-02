@@ -1,0 +1,53 @@
+/* Default styles for larger screens */
+.bank-account-manager {
+    font-size: 16px;
+  }
+  
+  /* Adjust styles for smaller screens */
+  @media (max-width: 768px) {
+    .bank-account-manager {
+      font-size: 14px;
+    }
+  
+    .bank-account-manager h2 {
+      font-size: 18px;
+    }
+  
+    .bank-account-manager .table-header {
+      font-size: 12px;
+    }
+  
+    .bank-account-manager .table-cell {
+      font-size: 12px;
+      padding: 8px 16px; /* Increase padding for mobile */
+    }
+  
+    /* Flexbox for better alignment in smaller screens */
+    .bank-account-manager .table-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* Add gap between rows */
+    }
+  
+    /* Increase spacing between columns for mobile */
+    .bank-account-manager .table-cell {
+      padding: 12px 20px; /* Increase horizontal padding for mobile */
+    }
+  
+    /* Adjust button padding and font size for mobile */
+    .bank-account-manager .button {
+      padding: 6px 12px; /* Adjust padding for buttons */
+      font-size: 12px;
+    }
+  
+    .bank-account-manager .button-icon {
+      width: 14px; /* Slightly larger icon size for mobile */
+      height: 14px;
+    }
+  
+    .bank-account-manager .flex {
+      display: flex;
+      gap: 12px; /* Increase space between buttons */
+    }
+  }
+  
