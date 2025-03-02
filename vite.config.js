@@ -1,18 +1,22 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
-import path from "path"; // Import path module
+import path from "path";
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: "./", // Ensure relative paths for assets (important for Azure)
   plugins: [react(), svgr()],
   server: {
-    host: "0.0.0.0", // Accept connections from all network interfaces
-    port: 5173, // You can change this port if needed
+    host: "0.0.0.0",
+    port: 5173,
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"), // Alias for the src directory
+      "@": path.resolve(__dirname, "src"),
     },
+  },
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
   },
 });
